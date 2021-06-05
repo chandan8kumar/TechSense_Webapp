@@ -16,7 +16,7 @@ def remove_duplicates(links):
 global new_links
 global old_links
 #%%
-df=pd.read_json(r'./Articles 3.0.json')
+df=pd.read_json(r'./Article.json')
 old_links=[]
 for i in df['url']:
         old_links.append(str(i))
@@ -198,7 +198,7 @@ list_of_dict+=get_articles(toi_links)
 list_of_dict=remove_unwanted_links(list_of_dict)
 # %%
 import json
-with open(r"./Articles 3.0.json", 'r') as read_file:
+with open(r"./Article.json", 'r') as read_file:
     all_data = json.load(read_file)
 list_of_dict+=all_data
 
@@ -206,6 +206,6 @@ list_of_dict=remove_duplicate_articles(list_of_dict)
 #%%
 list_of_dict=remove_unwanted_links(list_of_dict)
 #%%
-with open('./Articles 3.0.json', 'w') as fout:
+with open('./Article.json', 'w') as fout:
     json.dump(list_of_dict , fout)
 #%%
