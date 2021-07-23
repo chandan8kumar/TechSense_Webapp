@@ -1,14 +1,14 @@
 import React, { /*useEffect, useState*/} from "react";
 /*import axios from "axios";*/
-import { /*useDispatch,*/ useSelector } from "react-redux";
-import { selectUserInput/*, setBlogData*/ } from "../features/userSlice";
+/*import { useDispatch, useSelector } from "react-redux";
+import { selectUserInput, setBlogData } from "../features/userSlice";*/
 
 import "../styling/blogs.css";
 import articles from './Article.json';
 import ReadMoreReact from 'read-more-react';
 
 const Blogs = () => {
-  const searchInput = useSelector(selectUserInput);
+  /*const searchInput = useSelector(selectUserInput);*/
   /*const blog_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=9a20e3bb45fcf65897af8407be1aec6a`;
   const dispatch = useDispatch();
   const [blogs, setBlogs] = useState();
@@ -35,7 +35,7 @@ const Blogs = () => {
       <div className="blogs">
         {
             articles.map(article => (
-                <a className="blog" target="_blank" href={article.url}>
+                <a className="blog" target="_blank" href={article.url} rel="noreferrer">
                   <div>
                     <h3 className="sourceName">
                       <span>Beebom</span>
